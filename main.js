@@ -122,6 +122,7 @@ for (let ronda = 1; ronda <=5; ronda++) {
         puntajeTotal3 += puntosRonda;
 }
 
+let puntajeTotal3 = 0;
 console.log(puntajeTotal3);
 
 console.log(nombre, edad, vida, puntaje, estaActivo, puntajeTotal);
