@@ -29,3 +29,4 @@ const nombres = personajes.map((personaje) => {
 });
 
 console.log(nombres);
+
