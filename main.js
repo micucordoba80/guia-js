@@ -1,4 +1,5 @@
 // ejercicio 1: Crear datos de un jugador
+
 const nombre = "Luna";
 let edad = 18;
 let vida = 100;
@@ -7,6 +8,7 @@ let estaActivo = true;
 
 
 // ejercicio 2: crear sistema de puntaje
+
 puntosBase = 100;
 bonus = 50;
 penalizacion = 20;
@@ -16,6 +18,7 @@ console.log(nombre, edad, vida, puntaje, estaActivo, puntajeTotal);
 
 
 // ejercicio 3: Convertir texto a número
+
 const input = document.getElementById("dato");
 const boton = document.getElementById("btn");
 const mensaje = document.getElementById("mensaje");
@@ -247,3 +250,56 @@ const vidaTotal = personajes.reduce((acumulador, personaje) => {
 }, 0);
 
 console.log(vidaTotal);
+
+// ejercicio 23: Mostrar mensaje en pantalla
+
+const mensajes = document.getElementById("mensaje");
+
+mensajes.textContent = "Bienvenido a la guía de JavaScript";
+
+mensajes.style.color = "purple";
+
+
+// ejercicio 24: Botón que suma puntos
+
+const boton2 = document.getElementById("btn");
+const mensaje3 = document.getElementById("mensaje");
+
+let puntos = 0;
+
+boton2.addEventListener("click", function () {
+    puntos += 10;
+    mensaje3.textContent = "Puntos: " + puntos;
+});
+
+
+// ejercicio 25: Validar nombre de usuario
+
+const input2 = document.getElementById("dato");
+const boton3 = document.getElementById("btn");
+const mensaje4 = document.getElementById("mensaje");
+
+boton3.addEventListener("click", function () {
+    const nombreUsuario = input2.value;
+    if (nombreUsuario.length >= 2) {
+        mensaje4.textContent = "Bienvenido/a, " + nombreUsuario + "!";
+        mensaje4.style.color = "green";
+    } else {
+        mensaje4.textContent = "Ingresá un nombre para continuar";
+        mensaje4.style.color = "red";
+    }
+});
+
+
+// ejercicio 26: Guardar puntaje en LocalStorage
+
+const jugador3 = {
+ nombre: "Luna",
+ puntaje: 1500
+};
+
+localStorage.setItem("jugador", JSON.stringify(jugador3));
+
+const jugadorRecuperado = JSON.parse(localStorage.getItem("jugador"));
+
+console.log(jugadorRecuperado);
