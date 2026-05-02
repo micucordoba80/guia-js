@@ -250,3 +250,31 @@ personajesFuertes.forEach((personaje) => {
     console.log(personaje.nombre + " - Nivel: " + personaje.nivel);
 });
 
+
+// ejercicio 20: Obtener solo los nombres
+
+const nombres = personajes.map((personaje) => {
+    return personaje.nombre;
+});
+
+console.log(nombres);
+
+// ejercicio 21: Buscar un personaje
+
+const personajeBuscado = personajes.find((personaje) => {
+    return personaje.nombre === "Kai";
+});
+
+if (personajeBuscado) {
+    console.log("Personaje encontrado: " + personajeBuscado.nombre + " - Tipo: " + personajeBuscado.tipo);
+} else {
+    console.log("Personaje no encontrado");
+}   
+
+// ejercicio 22: Calcular total de vida
+
+const vidaTotal = personajes.reduce((acumulador, personaje) => {
+    return acumulador + personaje.vida;
+}, 0);
+
+console.log(vidaTotal);
